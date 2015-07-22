@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Hello</title>
+		<meta charset="utf-8" />
+		<script src="hello.js"></script>
+		<script>
+		//window.onload=hello;
+		document.addEventListener('DOMContentLoaded', hello);
+		</script>
+	</head>
+	<body>
+		<script>
+		for(var i=0;i<3;i++)
+		document.write("<div id='hello"+i+"'>Hello, World "+i+"!</div>");
+		</script>
+		<input id="nome"/>
+		<button id="helloButton" onclick="helloAgain()">Say hello again!
+		</button><br>
+		<a id="link" href="#" onclick="changeInnerHtml('link','DOM')">Hello, World!</a>
+	</body>
+</html>
