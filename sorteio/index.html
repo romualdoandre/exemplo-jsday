@@ -1,16 +1,16 @@
 <html>
 <head>
-	<title>Sorteio JS Day 2015</title>	
-</head>	
+	<title>Sorteio JS Day 2015</title>
+</head>
 <body>
-	<button id="sortear">Sortear</button>
+	<button id="sorteio">Sortear</button>
 	<div id="resultado"></div>
 	<script src="papaparse.min.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById("sortear").addEventListener("click", sortear);
 }, false);
-		
+
 		function sortear(){
 			Papa.parse("participantes.csv",{
 				 error: function(error, file){
