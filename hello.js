@@ -15,7 +15,7 @@ function helloAgain(){
 		name.value="";
 	}
 	else
-		alert("Digite um nome");
+		alert("Digite o seu nome");
 }
 
 function changeInnerHtml(id,arg){
