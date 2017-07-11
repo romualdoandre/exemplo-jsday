@@ -4,7 +4,7 @@
 </head>
     <body>
 		<label for="grupo">
-		<input id="grupo" name="grupo" type="number" placeholder="Número de integrantes">
+		<input id="grupo" name="grupo" type="number" required="true" placeholder="Número de integrantes">
         <button id="sortear">Sortear</button>
 	<div id="resultado"></div>
 	<script src="../libs/papaparse.min.js"></script>
@@ -15,7 +15,7 @@
 }, false);
 
 		function sortear(){
-			Papa.parse("participantes.csv",{
+			Papa.parse("../participantes.csv",{
 				 error: function(error, file){
 					 console.log(error);
 				 },

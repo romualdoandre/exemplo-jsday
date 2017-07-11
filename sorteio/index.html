@@ -6,28 +6,23 @@
 	<button id="sortear">Sortear</button>
 	<div id="resultado"></div>
 	<script src="../libs/papaparse.min.js"></script>
+	<script src="../libs/lodash.min.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById("sortear").addEventListener("click", sortear);
 }, false);
 
 		function sortear(){
-			Papa.parse("participantes.csv",{
+			Papa.parse("../participantes.csv",{
 				 error: function(error, file){
 					 console.log(error);
 				 },
 				 download: true,
 				 complete: function(results){
-					var sorteado=getRandomInt(0,results.data.length);
+					let sorteado=_.random(0,results.data.length);
 					document.getElementById("resultado").innerHTML="Nome: "+results.data[sorteado][0]+" E-mail: "+results.data[sorteado][1];
 				 }
 			});
-		}
-		// Retorna um  número inteiro entre min (incluso) e max (excluído)
-		// Usando Math.round() vai lhe dar uma distribuição não uniforme!
-		// fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-		function getRandomInt(min, max) {
-		  return Math.floor(Math.random() * (max - min)) + min;
 		}
 	</script>
 </body>
