@@ -44,6 +44,13 @@ var deathStar={
 	model: 'DS-1 Orbital Battle Station',
 	shoot(){
 		console.log("       ,_~\"\"\"~-,\n*---====*)------`,\n     |===========|\n     `,---------,'\n       ~-.___.-~  ");
+console.log(
+`   ,_~"""~-,
+ .'(_)------',
+ |===========|
+ ',---------,'
+   ~-.___.-~   `);
+
 		this.energy=0;
 	},
 	recharge: function(){this.energy=100}
