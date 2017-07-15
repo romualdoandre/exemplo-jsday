@@ -19,5 +19,5 @@ function helloAgain(){
 }
 
 function changeInnerHtml(id,arg){
-	document.getElementById(id).innerHTML="Hello, "+arg+"!";
+	document.querySelector(id).innerHTML="Hello, "+arg+"!";
 }
